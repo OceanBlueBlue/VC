@@ -31,7 +31,7 @@ CMFCApplication2View::CMFCApplication2View()
 {
 	// TODO: 在此处添加构造代码
 	flag = 0;
-	s = _T("Hello,World!");
+	s = _T("My Name");
 }
 
 CMFCApplication2View::~CMFCApplication2View()
@@ -57,7 +57,7 @@ void CMFCApplication2View::OnDraw(CDC* pDC)
 	CClientDC dc(this);
 	if (flag)
 	{
-		dc.TextOutW(0, 0, s);
+		dc.TextOutW(200, 200, s);
 	}
 	// TODO: 在此处为本机数据添加绘制代码
 
@@ -92,8 +92,8 @@ void CMFCApplication2View::OnLButtonDown(UINT nFlags, CPoint point)
 {
 	// TODO: 在此添加消息处理程序代码和/或调用默认值
 	//CClientDC p;
-
-	flag = 1;
 	
+	flag = 1;
+	Invalidate();
 	CView::OnLButtonDown(nFlags, point);
 }
