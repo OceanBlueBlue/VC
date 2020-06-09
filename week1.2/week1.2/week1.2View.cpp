@@ -98,5 +98,6 @@ void Cweek12View::OnLButtonDown(UINT nFlags, CPoint point)
 	
 	
 	flag = 1;
+	Invalidate();
 	CView::OnLButtonDown(nFlags, point);
 }
