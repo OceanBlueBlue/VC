@@ -23,6 +23,7 @@ IMPLEMENT_DYNCREATE(Cweek12View, CView)
 
 BEGIN_MESSAGE_MAP(Cweek12View, CView)
 	ON_WM_LBUTTONDOWN()
+	ON_WM_RBUTTONDOWN()
 END_MESSAGE_MAP()
 
 // Cweek12View 构造/析构
@@ -100,4 +101,12 @@ void Cweek12View::OnLButtonDown(UINT nFlags, CPoint point)
 	flag = 1;
 	Invalidate();
 	CView::OnLButtonDown(nFlags, point);
+}
+
+
+void Cweek12View::OnRButtonDown(UINT nFlags, CPoint point)
+{
+	// TODO: 在此添加消息处理程序代码和/或调用默认值
+
+	CView::OnRButtonDown(nFlags, point);
 }
